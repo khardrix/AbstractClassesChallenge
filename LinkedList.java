@@ -6,18 +6,11 @@ import java.util.List;
 
 public class LinkedList extends ListItem {
 
-    private String name;
     private ListItem current;
 
 
     public LinkedList(String name, List values) {
-        super(values);
-        this.name = name;
-    }
-
-
-    public String getName() {
-        return name;
+        super(name, values);
     }
 
 
