@@ -4,7 +4,7 @@ package AbstractClassesChallenge;
 // IMPORTS of needed tools and plug-ins
 import java.util.List;
 
-public class LinkedList extends ListItem implements Comparable<LinkedList> {
+public class LinkedList extends ListItem {
 
     private String name;
     private ListItem current;
@@ -31,24 +31,5 @@ public class LinkedList extends ListItem implements Comparable<LinkedList> {
     }
 
 
-    @Override
-    public int compareTo(LinkedList linkedList) {
 
-        if(linkedList == null){
-            return -1;
-        }
-
-        if(this.name != null && linkedList.getName() == null){
-            return -1;
-        }else if(this.name == null && linkedList.getName() != null){
-            return 1;
-        }else if(this.name == null && linkedList.getName() == null){
-            return -1;
-        }
-
-        String nameLower = this.name.toLowerCase();
-        String listItemLower = linkedList.getName().toLowerCase();
-
-        return nameLower.compareTo(listItemLower);
-    }
 }
